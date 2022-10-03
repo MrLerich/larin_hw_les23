@@ -13,7 +13,7 @@ class RequestParams(Schema):
 
 
 class BatchRequestParams(Schema):
-    queries = fields.Nested( RequestParams, many=True)
-    
+    queries = fields.Nested(RequestParams, many=True)
+
 
 

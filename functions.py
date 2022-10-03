@@ -29,7 +29,7 @@ def limit_query(param: str, data: List[str]) -> List[str]:
     limit = int(param)
     return list(data)[:limit]
 
-
-def search_pic(param: str, data: List[str]) -> List[str]:
-    regex = re.compile(param)
-    return list(filter(lambda y: regex.search(y), data))
+#for 24 hw
+# def search_pic(param: str, data: List[str]) -> List[str]:
+#     regex = re.compile(param)
+#     return list(filter(lambda x: regex.search(x), data))

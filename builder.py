@@ -5,7 +5,8 @@ CMD_TO_FUNCTION = {
     'map': functions.map_query,
     'unique': functions.unique_query,
     'sort': functions.sort_query,
-    'limit': functions.limit_query
+    'limit': functions.limit_query,
+    #'regex': functions.regex_query  #for 24 hw
 }
 
 FILE_NAME = 'data/apache_logs.txt'
