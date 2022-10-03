@@ -15,3 +15,4 @@ class RequestParams(Schema):
 
 class BatchRequestParams(Schema):
     queries = fields.Nested(RequestParams, many=True)  # не понимаю почему подсвечивается pycharm???
+    # Nested-умеет хранить в себе др схему(как раз для спсиска словарей норм)

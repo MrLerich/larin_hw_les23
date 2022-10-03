@@ -14,7 +14,7 @@ CMD_TO_FUNCTION: Dict[str, Callable] = {
 FILE_NAME: str = 'data/apache_logs.txt'
 
 
-def build_query(cmd:str, param: str, data: Optional[List[str]]) -> List[str]:
+def build_query(cmd: str, param: str, data: Optional[List[str]]) -> List[str]:
     """Создает запросы"""
     if data is None:
         with open(FILE_NAME) as f:

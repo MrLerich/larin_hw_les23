@@ -14,7 +14,8 @@ def perform_query() -> Response:
     except ValidationError as error:
         return Response(response=error.messages, status=400)
 
-    result = None
+    result = None #либо обрабатываем данные из файла на первой итерации либо уже по "отфильтрованным данным"
+    #приходит запрос query и по каждому cmd делаю соотв запрос build_query
     for query in params['queries']:
         result = build_query(cmd=query['cmd'], param=query['value'], data=result)
 

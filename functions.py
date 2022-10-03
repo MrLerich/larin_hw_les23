@@ -9,13 +9,13 @@ def filter_query(param: str, data: List[str]) -> List[str]:
 
 def map_query(param: str, data: List[str]) -> List[str]:
     """Получает номер колонки и выводит списком данные этой колонки."""
-    col_number = int(param)
-    return list(map(lambda x: x.split(' ')[col_number], data))
+    columns_number = int(param)
+    return list(map(lambda x: x.split(' ')[columns_number], data)) #делим по пробелу - удобно для логов
 
 
 def unique_query(data: List[str], *args, **kwargs) -> List:
     """Создает список из уникальных позиций."""
-    return list(set(data))
+    return list(set(data))  # множество в json не преобразуется -обертываю в список
 
 
 def sort_query(param: str, data: List[str]) -> List[str]:
