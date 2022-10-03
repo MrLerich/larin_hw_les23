@@ -4,9 +4,9 @@ from marshmallow import ValidationError
 from builder import build_query
 from models import BatchRequestParams
 
-app_bp = Blueprint('main', __name__)
+main_bp = Blueprint('main', __name__)
 
-@app_bp.route("/perform_query", methods=['POST'])
+@main_bp.route("/perform_query", methods=['POST'])
 def perform_query() -> Response:
     try:
         params = BatchRequestParams().load(request.json)
