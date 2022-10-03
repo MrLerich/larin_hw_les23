@@ -1,3 +1,5 @@
+from typing import Optional, List
+
 import functions
 
 CMD_TO_FUNCTION = {
@@ -6,13 +8,13 @@ CMD_TO_FUNCTION = {
     'unique': functions.unique_query,
     'sort': functions.sort_query,
     'limit': functions.limit_query,
-    #'regex': functions.regex_query  #for 24 hw
+    'regex': functions.regex_query  #for 24 hw
 }
 
 FILE_NAME = 'data/apache_logs.txt'
 
 
-def build_query(cmd, param, data):
+def build_query(cmd:str, param: str, data: Optional[List[str]]):
     """Создает запросы"""
     if data is None:
         with open(FILE_NAME) as f:

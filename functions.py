@@ -31,6 +31,6 @@ def limit_query(param: str, data: List[str]) -> List[str]:
 
 
 # for 24 hw "images/\\w+\\.png" "^46\\."
-def search_pic(param: str, data: List[str]) -> List[str]:
+def regex_query(param: str, data: List[str]) -> List[str]:
     regex = re.compile(param)
     return list(filter(lambda x: re.search(regex, x), data))
