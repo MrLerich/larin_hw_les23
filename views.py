@@ -11,8 +11,8 @@ def perform_query():
     try:
         params = BatchRequestParams().load(request.json)
 
-    except ValidationError as e:
-        return e.message, 404
+    except ValidationError as error:
+        return error.messages, 404
 
     result = None
     for query in params['queries']:
